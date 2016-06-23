@@ -49,15 +49,15 @@ main {
   height:45px;
   margin-right:1.5em;
   justify-content: center;
-  order:2;
   transition: all 0.3s ease-in;
 }
 .utility nav.cotact ul {
-  padding: 20% 0;
+  padding: 12% 0;
 }
 .utility nav.cotact ul li a {
   color:#585858;
   font-size:1rem;
+  font-weight: 600;
 }
 .utility nav.cotact ul li a:hover {
   color:#C60C30;
@@ -75,9 +75,7 @@ main {
   -webkit-transition:width 0.3s;
   -moz-transition:width 0.3s;
   transition:width 0.3s;
-
   -webkit-backface-visibility:hidden;
-  order:2;
 }
 .sb-search-input {
   position:relative;
@@ -132,12 +130,14 @@ input[type=search].sb-search-input {
   speak:none;
 }
 .sb-icon-search:before {
-  content:"A";
+  font-family: Spine-Icons;
+  content:"$";
 }
 .sb-search.sb-search-open,
 .no-js .sb-search {
-    width: 100%;
-    order:1;
+    width: calc(100% - 60px);
+    position:absolute;
+    right:30px;
     transition: all 0.2s ease-in;
 }
 .sb-search.sb-search-open .sb-icon-search,
@@ -179,6 +179,7 @@ a {
 h1 {
   font-size:2.6rem;
   font-weight:700;
+  letter-spacing: -1px;
   padding-bottom: 1.2em;
   padding-top: 1.2em;
   border-top:1px solid #cacaca;
@@ -196,8 +197,9 @@ header.article-header h1 {
   padding-top:0;
 }
 h2 {
+  font-size:2.2rem;
   font-weight: 600;
-  padding-top:1.2em;
+  padding-top:2em;
   padding-bottom: 1.2em;
   line-height: 1.2;
 }
@@ -268,7 +270,7 @@ blockquote,
 ol,
 p~p,
 ul {
-  padding-bottom:1.2em;
+  padding-bottom:1.3em;
 }
 main ul li,
 main ol li {
@@ -301,6 +303,7 @@ main ul ol {
 main dl {
   font-size:1rem;
   line-height: 1.8;
+  padding-bottom: 1.5em;
 }
 main dl dt {
   padding-top:.9em;
@@ -466,6 +469,98 @@ table.tablepress thead tr th,
 .tablepress-table-description {
   margin:2em 0;
 }
+/* Events */
+.single-tribe_events h1:first-of-type {
+  padding-bottom:0;
+  padding-top:0;
+}
+.single-tribe_events h2 {
+  font-size:1.4rem;
+  padding-top:0;
+  padding-bottom:2em;
+  font-weight:400;
+}
+#tribe-events .tribe-events-button,
+#tribe_events_filters_wrapper input[type=submit],
+.tribe-events-button,
+.tribe-events-button.tribe-active:hover,
+.tribe-events-button.tribe-inactive,
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-],
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]>a {
+  background-color:#4C6EFF;
+}
+.tribe-events-button:hover,
+#tribe-events .tribe-events-button:hover {
+  background-color:#C60C30;
+}
+.single-tribe_events .tribe-events-event-meta {
+  background:transparent;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  border-bottom:1px rgba(127,127,127,0.2) solid;
+}
+.single-tribe_events #tribe-events-footer {
+  border-top:none;
+}
+.tribe-events-meta-group .tribe-events-single-section-title {
+  font-size:1.3rem;
+}
+.single-tribe_events #tribe-events-content .tribe-events-event-meta dt,
+.single-tribe_events #tribe-events-content .tribe-events-event-meta dd {
+float:none;
+}
+.single-tribe_events #tribe-events-content .tribe-events-event-meta dd {
+  font-size:.9rem;
+}
+.single-tribe_events acronym,
+.single-tribe_events abbr {
+  letter-spacing: 0;
+}
+.tribe-events-list .tribe-events-event-cost span {
+  border-radius:0;
+  background:#EBE8DE;
+}
+.tribe-events-loop .tribe-events-event-meta {
+  margin-bottom:1.6em;
+}
+/* - */
+#tribe-bar-form {
+  border:1px solid #cacaca;
+}
+#tribe-bar-form,
+#tribe-bar-collapse-toggle {
+  background: #EBE8DE;
+}
+#tribe-bar-form .tribe-bar-submit input[type=submit] {
+  background:#4C6EFF;
+  font-size:1.2rem;
+}
+#tribe-bar-form .tribe-bar-submit input[type=submit]:hover {
+  background:#C60C30;
+}
+.tribe-bar-views-inner,
+#tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a {
+  background:#fff;
+}
+.tribe-events-calendar thead th {
+  background-color:#fff;
+  color:#585858;
+  border-left:1px solid #d2d2d2;
+  border-right:1px solid #d2d2d2;
+  border-top:1px solid #d2d2d2;
+}
+.tribe-events-calendar div[id*=tribe-events-daynum-],
+.tribe-events-calendar div[id*=tribe-events-daynum-] a {
+  background-color: #ebe8de;
+  color:#585858
+}
+#tribe-events-content .tribe-events-tooltip h4{
+  color:#a74a4c;
+}
+.tribe-events-calendar th {
+  letter-spacing: 0;
+}
 /* Forms */
 input[type=text],
 input[type=password],
@@ -524,6 +619,60 @@ input[type=button]:hover {
 .widget input[type=button] {
   width:100%;
   margin-top:1em;
+}
+/*** Gravity forms ***/
+.gform_wrapper h3.gform_title {
+  font-size: 1.6rem;
+}
+.gform_wrapper span.gform_description {
+  font-size:1.1rem;
+  line-height:1.7rem;
+}
+.gform_wrapper .gf_progressbar {
+  border-radius:0;
+  box-shadow: none;
+}
+.gform_wrapper .percentbar_blue {
+  background-image:none;
+  background-color: #a74a4c;
+}
+.gform_wrapper .top_label .gfield_label {
+  font-weight:600;
+  font-size:1rem;
+  margin-top:3em;
+}
+.gfield_html h3 {
+  margin-top:2em;
+}
+.gform_wrapper .gfield_checkbox li label,
+.gform_wrapper .gfield_radio li label {
+  font-size:1rem;
+  font-weight:400;
+}
+.gform_wrapper .gfield_date_day label,
+.gform_wrapper .gfield_date_month label,
+.gform_wrapper .gfield_date_year label,
+.gform_wrapper .gfield_time_ampm label,
+.gform_wrapper .gfield_time_hour label,
+.gform_wrapper .gfield_time_minute label,
+.gform_wrapper .ginput_complex label,
+.gform_wrapper .instruction {
+  font-weight:400;
+  margin-bottom: 1.6em;
+}
+.gform_wrapper .gform_page_footer .button.gform_next_button,
+.gform_wrapper .gform_page_footer .button.gform_previous_button {
+  background:transparent;
+  color:#4C6EFF;
+  font-size:1.3rem;
+}
+.gform_wrapper .gform_page_footer .button.gform_next_button:hover,
+.gform_wrapper .gform_page_footer .button.gform_previous_button:hover {
+  color:#c60c30;
+}
+.gform_wrapper input[type=submit] {
+  float:right;
+  width:30%;
 }
 /* The button wheel */
 .btn {
