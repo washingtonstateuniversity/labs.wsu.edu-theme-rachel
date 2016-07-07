@@ -10,4 +10,4 @@ function wsu_labs_enque_scripts(){
 /*
 * Add HTML5 search box on the side bar menu
 */
-add_theme_support( 'html5', array( 'search-form' ) );
+add_theme_support( 'html5', array( 'sb-search' ) );

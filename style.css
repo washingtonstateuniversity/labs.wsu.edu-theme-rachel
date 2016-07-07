@@ -364,14 +364,15 @@ sub,
 sup {
   font-size:.8em;
 }
-/* Blog and archive */
+/* Blog, archive & search */
 .blog main article header h2,
-.archive main article header h2 {
+.archive main article header h2,
+.search main article header h2 {
   padding-bottom:.5em;
-  margin-top:1.5em;
 }
-.blog main article:first-of-type h2,
-.archive main article:first-of-type h2 {
+.blog main article:first-of-type h2.article-title,
+.archive main article:first-of-type h2.article-title,
+.search main article:first-of-type h2.article-title {
   padding-top:0;
   margin-top:0;
 }
@@ -380,7 +381,9 @@ sup {
 .blog .article-header hgroup.source,
 .blog .article-header .hgroup.source,
 .archive .article-header hgroup.source,
-.archive .article-header .hgroup.source {
+.archive .article-header .hgroup.source,
+.search .article-header hgroup.source,
+.search .article-header .hgroup.source {
   margin-bottom:1.4em;
   color:#777;
   font-size:1.1rem;
@@ -534,7 +537,7 @@ float:none;
 }
 #tribe-bar-form .tribe-bar-submit input[type=submit] {
   background:#4C6EFF;
-  font-size:1.2rem;
+  font-size:1rem;
 }
 #tribe-bar-form .tribe-bar-submit input[type=submit]:hover {
   background:#C60C30;
@@ -562,12 +565,12 @@ float:none;
   letter-spacing: 0;
 }
 /* Forms */
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=search],
-select,
-textarea {
+main input[type=text],
+main input[type=password],
+main input[type=email],
+main input[type=search],
+main select,
+main textarea {
   background:#ebe8de;
   border-radius:0;
   border:1px solid #cacaca;
@@ -575,11 +578,11 @@ textarea {
   font-size:1.5rem;
   color:#585858;
 }
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=email]:focus,
-input[type=search]:focus,
-textarea:focus {
+main input[type=text]:focus,
+main input[type=password]:focus,
+main input[type=email]:focus,
+main input[type=search]:focus,
+main textarea:focus {
   color:#585858;
   box-shadow: none;
   border:2px solid #cacaca;
@@ -612,6 +615,10 @@ input[type=button]:hover {
   background:#c60c30;
   color:#fff;
 }
+label + input[type="submit"] {
+
+    float: right;
+}
 .widget .button,
 .widget button,
 .widget input[type=submit],
@@ -619,6 +626,7 @@ input[type=button]:hover {
 .widget input[type=button] {
   width:100%;
   margin-top:1em;
+  margin-bottom:2em;
 }
 /*** Gravity forms ***/
 .gform_wrapper h3.gform_title {
@@ -636,10 +644,12 @@ input[type=button]:hover {
   background-image:none;
   background-color: #a74a4c;
 }
+main label,
+main legend,
 .gform_wrapper .top_label .gfield_label {
   font-weight:600;
   font-size:1rem;
-  margin-top:3em;
+  margin-top:2em;
 }
 .gfield_html h3 {
   margin-top:2em;
