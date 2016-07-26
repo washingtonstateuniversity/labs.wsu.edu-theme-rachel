@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.0.1
+ Version:        0.0.2
 */
 * {
   margin:0;
@@ -205,12 +205,9 @@ h1 {
   font-weight:700;
   letter-spacing: -1px;
   padding-bottom: 1.2em;
-  padding-top: 1.2em;
-  border-top:1px solid #cacaca;
   margin-top:1.2em;
 }
 h1.article-title:first-of-type {
-  border-top:none;
   margin-top:0;
 }
 .single-post h1 {
@@ -290,6 +287,9 @@ aside p,
 }
 .widget ul li:first-of-type {
   border-top:none;
+}
+span.comment-author-link + a {
+    font-weight: 600;
 }
 p,
 main ul li,
