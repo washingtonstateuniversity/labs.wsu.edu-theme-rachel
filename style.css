@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.0.2
+ Version:        0.0.4
 */
 * {
   margin:0;
@@ -52,7 +52,7 @@ main {
   transition: all 0.3s ease-in;
 }
 .utility nav.cotact ul {
-  padding: 12% 0;
+  padding: 5% 0;
 }
 .utility nav.cotact ul li a {
   color:#585858;
@@ -197,14 +197,21 @@ span.sub-header-default {
   display:none;
 }
 /* Typography */
+article footer a,
 main a {
   color:#4f868e;
+  /*background:#f3f2ee;*/
+  font-weight:400;
+}
+aside a,
+.widget a {
+  font-weight:300;
 }
 h1 {
   font-size:2.6rem;
   font-weight:700;
   letter-spacing: -1px;
-  padding-bottom: 1.2em;
+  padding-bottom: .8em;
   margin-top:1.2em;
 }
 h1.article-title:first-of-type {
